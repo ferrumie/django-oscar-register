@@ -35,3 +35,9 @@ class RegisterSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("password does not match")
         password_validation.validate_password(pass1)
         return data
+
+
+class SerializerList(serializers.ModelSerializer):
+    class Meta:
+        model= RegisterUser
+        fields=['id','email','first_name','last_name',]

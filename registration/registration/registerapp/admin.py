@@ -28,4 +28,4 @@ class RegisterUserAdmin(UserAdmin):
     search_fields = ('email',)
     ordering = ('email',)
 
-    admin.site.register(RegisterUser)
+admin.site.register(RegisterUser)
