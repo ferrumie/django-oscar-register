@@ -51,6 +51,9 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'registration.urls'
 
+# using custom user model
+AUTH_USER_MODEL = 'registerapp.RegisterUser'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
