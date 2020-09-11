@@ -1,18 +1,18 @@
 from django.shortcuts import render
 from rest_framework import generics
-from .serializers import RegisterSerializer, SerializerList
+from .serializers import RegisterCreateSerializer, RegisterListSerializer
 from .models import RegisterUser
 
 
-class RegisterAPIView(generics.CreateAPIView):
+class RegisterCreateView(generics.CreateAPIView):
     """ Registration create view """
 
     queryset = RegisterUser.objects.all()
-    serializer_class = RegisterSerializer
+    serializer_class = RegisterCreateSerializer
 
 
-class RegisterListAPIView(generics.ListAPIView):
+class RegisterListView(generics.ListAPIView):
     """ Registered users list view """
-    
+
     queryset = RegisterUser.objects.all()
-    serializer_class = SerializerList
+    serializer_class = RegisterListSerializer

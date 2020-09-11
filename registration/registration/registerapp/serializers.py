@@ -3,7 +3,7 @@ from .models import RegisterUser
 from django.contrib.auth import password_validation
 
 
-class RegisterSerializer(serializers.ModelSerializer):
+class RegisterCreateSerializer(serializers.ModelSerializer):
     """
         Serializer for the register fields
     """
@@ -37,7 +37,8 @@ class RegisterSerializer(serializers.ModelSerializer):
         return data
 
 
-class SerializerList(serializers.ModelSerializer):
+class RegisterListSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = RegisterUser
         fields = [
