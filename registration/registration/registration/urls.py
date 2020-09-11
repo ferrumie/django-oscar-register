@@ -15,8 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+import django
+from django.apps import apps
+import oscarapi.urls as oscarapp_api
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('registerapp.urls'))
+    # main app urls, to be linked with oscarapi endpoint
+    path('api/', include('registerapp.urls')),
+    # oscar api urls. contains login endpoint and ...
+    path('api/', include(oscarapp_api)),
+    # multiple language serve
+    path('il8n/', include(django.conf.urls.i18n)),
+    # Oscar urls (needed for oscar api)
+    path('', include(apps.get_app_config('oscar').urls[0]))
 ]
