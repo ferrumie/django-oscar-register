@@ -5,12 +5,14 @@ from .models import RegisterUser
 
 
 class RegisterAPIView(generics.CreateAPIView):
-    """registration create view"""
+    """ Registration create view """
 
     queryset = RegisterUser.objects.all()
     serializer_class = RegisterSerializer
 
 
 class RegisterListAPIView(generics.ListAPIView):
+    """ Registered users list view """
+    
     queryset = RegisterUser.objects.all()
     serializer_class = SerializerList

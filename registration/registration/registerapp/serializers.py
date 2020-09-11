@@ -39,5 +39,11 @@ class RegisterSerializer(serializers.ModelSerializer):
 
 class SerializerList(serializers.ModelSerializer):
     class Meta:
-        model= RegisterUser
-        fields=['id','email','first_name','last_name',]
+        model = RegisterUser
+        fields = [
+            'id',
+            'email',
+            'first_name',
+            'last_name',
+            'is_active',
+            'is_superuser']
