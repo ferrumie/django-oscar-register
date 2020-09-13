@@ -25,6 +25,9 @@ send a post request to https://oscar-register.herokuapp.com/register using the k
 ``` 
 to create a new user
 - You can test the list endpoint by sending a get request to to  `https://oscar-register.herokuapp.com/api/list` endpoint
+---
+
+or
 
 - Clone the repository to your local using `git clone <repo-link>`
 

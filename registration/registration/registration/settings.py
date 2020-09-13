@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 # oscar import 
 from oscar.defaults import *
-
+import django_heroku
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -218,3 +218,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'  # static files
 
 MEDIA_URL ='/media/'    # media files serve
+
+django_heroku.settings(locals())
