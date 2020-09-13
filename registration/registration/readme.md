@@ -9,9 +9,8 @@ This Repo contains a registration and registered users list endpoints integrated
 ---
 ### How to use
 ---
-- open the url to my app https://oscar-register.herokuapp.com/ 
 
-- navigate to https://oscar-register.herokuapp.com/api/register and create a user using the browsable api form
+- open the register endpoint https://oscar-register.herokuapp.com/api/register and create a user using the django rest framework browsable api form
 or
 send a post request to https://oscar-register.herokuapp.com/register using the key
 ```
