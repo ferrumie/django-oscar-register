@@ -8,6 +8,24 @@ This Repo contains a registration and registered users list endpoints integrated
 
 ---
 ### How to use
+---
+- open the url to my app https://oscar-register.herokuapp.com/ 
+
+- navigate to https://oscar-register.herokuapp.com/api/register and create a user using the browsable api form
+or
+send a post request to https://oscar-register.herokuapp.com/register using the key
+```
+  {
+    'email':'youremail@email.com',
+    'first_name':'first name',
+    'last_name':'last name',
+    'password':'yourpassword',
+    'confirm_password':'confirmyourpassword'
+}
+``` 
+to create a new user
+- You can test the list endpoint by sending a get request to to  `https://oscar-register.herokuapp.com/api/list` endpoint
+
 - Clone the repository to your local using `git clone <repo-link>`
 
 - Navigate to the cloned repo and activate a virtual environment
