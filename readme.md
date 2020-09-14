@@ -9,18 +9,17 @@ This Repo contains a registration and registered users list endpoints integrated
 ---
 ### How to use
 ---
-- open the url to my app https://oscar-register.herokuapp.com/ 
 
-- navigate to https://oscar-register.herokuapp.com/api/register and create a user using the browsable api form
+- open the register endpoint https://oscar-register.herokuapp.com/api/register/ and create a user using the django rest framework browsable api form
 or
-send a post request to https://oscar-register.herokuapp.com/register using the key
+send a post request to https://oscar-register.herokuapp.com/api/register/ with the below data to the response body
 ```
-  {
-    'email':'youremail@email.com',
-    'first_name':'first name',
-    'last_name':'last name',
-    'password':'yourpassword',
-    'confirm_password':'confirmyourpassword'
+    {
+    "email":"email@email.com",
+    "first_name":"first_name",
+    "last_name":"last_name",
+    "password":"password",
+    "confirm_password":"confirmpassword"
 }
 ``` 
 to create a new user
@@ -41,9 +40,9 @@ or
 
 - Run `python manage.py runserver` 
 
-- You can now test the endpoints using the django rest framwork browsable api by navigating to `localhost:8000/api/register` endpoint and enter the required fields to register and the `localhost:8000/api/list` to see the registered user's list
+- You can now test the endpoints using the django rest framwork browsable api by navigating to `localhost:8000/api/register/` endpoint and enter the required fields to register and the `localhost:8000/api/list` to see the registered user's list
 
-- You can also test with *postman* by sending a *POST* request to the `localhost:8000/api/register` endpoint with the following keys
+- You can also test with *postman* by sending a *POST* request to the `localhost:8000/api/register/` with the below data to the response body
 ```
 {
     'email':'youremail@email.com',
